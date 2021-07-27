@@ -298,7 +298,8 @@ body.lock {
 h2 {
   font-size: 48px;
   line-height: 122.9%;
-  color: #0d1215; }
+  color: #0d1215;
+  font-weight: 400; }
   .title-h2 span,
   h2 span {
     font-weight: 600;
@@ -318,6 +319,7 @@ h2 {
   border-bottom-right-radius: 32px;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.45);
   z-index: 9; }
   .header__wrap {
     display: -webkit-box;
@@ -395,16 +397,14 @@ h2 {
       padding-top: 10px;
       padding-left: 0;
       top: 100%;
-      left: 0;
-      -webkit-filter: drop-shadow(4px 4px 0px #284d73);
-              filter: drop-shadow(4px 4px 0px #284d73); }
+      left: 0; }
   .main-nav__link {
     display: block;
     color: #0d1215;
     position: relative; }
   .main-nav__submenu {
     position: absolute;
-    min-width: 200px;
+    min-width: 345px;
     opacity: 0;
     visibility: hidden;
     z-index: 10;
@@ -413,22 +413,26 @@ h2 {
     transition: all 0.3s ease; }
   .main-nav__subitem:first-child > .main-nav__sublink {
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px; }
+    border-top-right-radius: 15px;
+    border-top: 1px solid #5b9fd1; }
   .main-nav__subitem:last-child > .main-nav__sublink {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    border-bottom: none; }
+    border-bottom: 1px solid #5b9fd1; }
   .main-nav__sublink {
     display: block;
     padding: 10px 10px;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
     color: #0d1215;
-    background: #fff;
-    border-bottom: 1px solid #284d73;
-    background: #f3f7ff; }
+    border: 1px solid #5b9fd1;
+    border-bottom: none;
+    border-top: none;
+    background: white; }
     .main-nav__sublink:hover {
       color: #fff;
-      background: #284d73; }
+      background: #5b9fd1; }
   .main-nav .nav-item {
     position: relative; }
     .main-nav .nav-item:hover > .nav-submenu {
@@ -440,7 +444,7 @@ h2 {
     padding-left: 10px; }
 
 .container-bg {
-  background: url("../img/main-gradient.svg") no-repeat 120% 60%/65%; }
+  background: url("../img/main-gradient-2.svg") no-repeat 100% 40%; }
 
 .main-screen__wrap {
   position: relative;
@@ -468,6 +472,11 @@ h2 {
 
 .main-screen__text {
   margin-bottom: 105px; }
+
+.main-screen__image img {
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain; }
 
 .main-screen__pagination {
   margin-top: 85px;
@@ -545,7 +554,7 @@ h2 {
     color: #284d73; }
 
 .timeline {
-  background: url("../img/left.svg") no-repeat 0% 50%/50%, url("../img/right.svg") no-repeat 100% 50%/70%, #f3f7ff; }
+  background: url("../img/left-2.svg") no-repeat 0% 50%, url("../img/right-2.svg") no-repeat 100% 50%, #f3f7ff; }
   .timeline__wrap {
     padding: 90px 0; }
   .timeline__title {
@@ -686,6 +695,8 @@ h2 {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 45px;
     grid-row-gap: 20px; }
+  .card-process__text strong {
+    font-weight: 600; }
   .card-process__image {
     text-align: center; }
 
@@ -882,14 +893,9 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .partners__item {
-    cursor: pointer; }
-    .partners__item img {
-      -webkit-filter: grayscale(1);
-              filter: grayscale(1); }
-    .partners__item:hover img {
-      -webkit-filter: grayscale(0);
-              filter: grayscale(0); }
+  .partners__item img {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1); }
 
 .question {
   background: #f3f7ff; }
@@ -971,7 +977,7 @@ h2 {
       margin-bottom: 40px; }
 
 .footer {
-  background: url("../img/bg-noize.png"), url("../img/footer_back.svg") no-repeat 130% 60%/50%, url("../img/footer_back.svg") no-repeat -20% 40%/50%, #284d73; }
+  background: url("../img/footer-gradient.svg") no-repeat 120% 100%/50%, url("../img/footer-gradient.svg") no-repeat -20% 70%/50%, #284d73; }
   .footer__wrap {
     padding: 60px 0 45px 0; }
   .footer__row:first-child {
@@ -1002,7 +1008,7 @@ h2 {
     display: flex;
     margin-bottom: 15px; }
   .footer__social-item {
-    margin-right: 45px;
+    margin-right: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
