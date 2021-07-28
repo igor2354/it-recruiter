@@ -444,7 +444,7 @@ h2 {
     padding-left: 10px; }
 
 .container-bg {
-  background: url("../img/main-gradient-2.svg") no-repeat 100% 40%; }
+  background: url("../img/main-gradient-2.svg") no-repeat 100% 40%, #f3f7ff; }
 
 .main-screen__wrap {
   position: relative;
