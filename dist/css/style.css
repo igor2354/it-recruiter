@@ -1063,8 +1063,8 @@ ul.blue-dots li {
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px); }
   .main-course__icon img {
-    width: 130px;
-    height: 130px;
+    width: 105px;
+    height: 105px;
     -o-object-fit: contain;
        object-fit: contain;
     vertical-align: middle; }
@@ -1105,7 +1105,7 @@ ul.blue-dots li {
   text-align: center; }
 
 .block-info {
-  padding: 45px 0 0 0; }
+  padding: 75px 0 0 0; }
   .block-info__row {
     display: grid;
     grid-template-columns: 0.73fr 0.73fr 1fr;
@@ -1129,7 +1129,8 @@ ul.blue-dots li {
   .program__list {
     display: grid;
     grid-template-columns: 0.73fr 0.73fr 1fr;
-    gap: 140px; }
+    grid-column-gap: 140px;
+    grid-row-gap: 45px; }
   .program__course {
     margin-top: 45px; }
 
@@ -1189,6 +1190,7 @@ ul.blue-dots li {
     color: #ffffff; }
   .card-course__button {
     max-width: 100%;
+    margin-left: -10px;
     margin-bottom: 45px; }
   .card-course__text {
     font-size: 14px;

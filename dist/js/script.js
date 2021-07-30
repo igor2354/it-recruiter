@@ -50,6 +50,7 @@ document.addEventListener(
 
 		let sldierParticipant = new Swiper(".participant__slider", {
 			slidesPerView: "auto",
+			freeMode: true,
 			spaceBetween: 30,
 			navigation: {
 				nextEl: ".participant__next",
@@ -142,5 +143,17 @@ $(document).ready(function () {
 	// Кастомный скроллбар
 	$(".js-text-hidden").mCustomScrollbar({
 		theme: "my-theme",
+	});
+
+	// ПЛАВНЫЙ ЯКОРЬ
+	$(".js-anchor").click(function () {
+		let target = $(this).attr("href");
+		$("html, body").animate(
+			{
+				scrollTop: $(target).offset().top - 50,
+			},
+			800
+		);
+		return false;
 	});
 });
