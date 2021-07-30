@@ -50,7 +50,8 @@ document.addEventListener(
 
 		let sldierParticipant = new Swiper(".participant__slider", {
 			slidesPerView: "auto",
-			freeMode: true,
+			// freeMode: true,
+			loop: true,
 			spaceBetween: 30,
 			navigation: {
 				nextEl: ".participant__next",
