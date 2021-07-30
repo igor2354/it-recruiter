@@ -59,7 +59,8 @@ document.addEventListener(
 			},
 			pagination: {
 				el: ".participant__pagination",
-				dynamicBullets: true,
+				type: "fraction",
+				// dynamicBullets: true,
 			},
 		});
 	},
