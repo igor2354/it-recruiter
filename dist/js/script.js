@@ -37,6 +37,29 @@ document.addEventListener(
 				prevEl: ".mass-media__prev",
 			},
 		});
+
+		let sldierReviews = new Swiper(".reviews__sldier", {
+			slidesPerView: "auto",
+			spaceBetween: 30,
+
+			navigation: {
+				nextEl: ".reviews__next",
+				prevEl: ".reviews__prev",
+			},
+		});
+
+		let sldierParticipant = new Swiper(".participant__slider", {
+			slidesPerView: "auto",
+			spaceBetween: 30,
+			navigation: {
+				nextEl: ".participant__next",
+				prevEl: ".participant__prev",
+			},
+			pagination: {
+				el: ".participant__pagination",
+				dynamicBullets: true,
+			},
+		});
 	},
 	false
 );
@@ -114,5 +137,10 @@ $(document).ready(function () {
 
 			$(this).next().slideDown();
 		}
+	});
+
+	// Кастомный скроллбар
+	$(".js-text-hidden").mCustomScrollbar({
+		theme: "my-theme",
 	});
 });
