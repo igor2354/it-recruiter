@@ -1471,7 +1471,7 @@ ul.blue-dots li {
     left: initial;
     right: initial;
     bottom: initial;
-    margin: 0 15px;
+    margin: 0 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1482,6 +1482,7 @@ ul.blue-dots li {
         -ms-flex-align: baseline;
             align-items: baseline;
     width: initial !important;
+    min-width: 80px;
     font-size: 14px;
     line-height: 150%;
     color: rgba(13, 18, 21, 0.5); }
