@@ -48,21 +48,60 @@ document.addEventListener(
 			},
 		});
 
-		let sldierParticipant = new Swiper(".participant__slider", {
-			slidesPerView: "auto",
-			// freeMode: true,
-			loop: true,
-			spaceBetween: 30,
-			navigation: {
-				nextEl: ".participant__next",
-				prevEl: ".participant__prev",
-			},
-			pagination: {
-				el: ".participant__pagination",
-				type: "fraction",
-				// dynamicBullets: true,
-			},
-		});
+		let slidersCard = document.querySelectorAll(".slider-card__container");
+
+		if (slidersCard != null) {
+			slidersCard.forEach((element) => {
+				let caseLoop = true;
+
+				if (element.querySelectorAll(".slider-card__slide").length <= 3) {
+					caseLoop = false;
+					element
+						.closest(".--slider-card")
+						.querySelectorAll(".slider-card__pagination")
+						.forEach((el) => {
+							el.classList.add("slider-card-pagination-lock");
+						});
+				}
+
+				let sldierCard = new Swiper(element, {
+					slidesPerView: "auto",
+					loop: caseLoop,
+					watchOverflow: true,
+					spaceBetween: 30,
+					navigation: {
+						nextEl: "." + element.closest(".--slider-card").classList[0] + " .slider-card__next",
+						prevEl: "." + element.closest(".--slider-card").classList[0] + " .slider-card__prev",
+					},
+
+					on: {
+						init: function () {
+							let slider = element;
+							if (slider !== null) {
+								let sliderCurrent = slider.closest(".--slider-card").querySelectorAll(".slider-card__pagination-current");
+								sliderCurrent.forEach((el) => {
+									el.textContent = this.realIndex + 1;
+								});
+								let sliderAll = slider.closest(".--slider-card").querySelectorAll(".slider-card__pagination-all");
+								sliderAll.forEach((el) => {
+									el.textContent = this.snapIndex;
+								});
+							}
+						},
+
+						slideChange: function () {
+							let slider = element;
+							if (slider !== null) {
+								let sliderCurrent = slider.closest(".--slider-card").querySelectorAll(".slider-card__pagination-current");
+								sliderCurrent.forEach((el) => {
+									el.textContent = this.realIndex + 1;
+								});
+							}
+						},
+					},
+				});
+			});
+		}
 	},
 	false
 );
@@ -126,8 +165,8 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".question__group").on("click", function () {
-		if ($(this).parent().hasClass("active")) {
+	$(".question__name").on("click", function () {
+		if ($(this).parents(".question__item").hasClass("active")) {
 			$(".question__item").removeClass("active");
 
 			$(".question__text").slideUp();
@@ -136,9 +175,9 @@ $(document).ready(function () {
 
 			$(".question__text").slideUp();
 
-			$(this).parent().addClass("active");
+			$(this).parents(".question__item").addClass("active");
 
-			$(this).next().slideDown();
+			$(this).parents(".question__item").find(".question__text").slideDown();
 		}
 	});
 
