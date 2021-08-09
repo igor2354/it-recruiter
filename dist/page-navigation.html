@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="./css/lightgallery.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="wrapper">
+ <!-- HEADER -->
+
+<header class="header">
+	<div class="container">
+		<div class="header__wrap">
+			<div class="header__logo logo">
+				<a href="#"><img src="./img/logo.svg" alt="" /></a>
+			</div>
+
+			<nav class="header__nav">
+				<ul class="main-nav">
+					<li class="main-nav__item --drop nav-item">
+						<a href="#" class="main-nav__link animate-link">Направления</a>
+						<ul class="main-nav__submenu nav-submenu">
+							<li class="main-nav__subitem nav-item">
+								<a href="#" class="main-nav__sublink">Знакомство с профессией</a>
+							</li>
+
+							<li class="main-nav__subitem nav-item">
+								<a href="#" class="main-nav__sublink">«АйтиРекрут» (Профессии)</a>
+							</li>
+
+							<li class="main-nav__subitem nav-item">
+								<a href="#" class="main-nav__sublink">Тест на знание IT-профессий</a>
+							</li>
+
+							<li class="main-nav__subitem nav-item">
+								<a href="#" class="main-nav__sublink">Первый модуль «АйтиРекрут» (Рекрутинг)</a>
+							</li>
+
+							<li class="main-nav__subitem nav-item">
+								<a href="#" class="main-nav__sublink">«АйтиРекрут» (Рекрутинг)</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="main-nav__item nav-item">
+						<a href="#" class="main-nav__link animate-link">Обо мне</a>
+					</li>
+
+					<li class="main-nav__item nav-item">
+						<a href="#" class="main-nav__link animate-link">Вопрос-ответ</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="header__group-social">
+				<div class="header__email main-email">
+					<a class="animate-link" href="mailto:itrecruter@mail.ru">itrecruter@mail.ru</a>
+				</div>
+
+				<div class="header__insta main-insta">
+					<a href="#"><img src="./img/icon-insta.svg" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- // HEADER -->
+
+
+<section class="page-navigation">
+	<div class="container">
+		<ul class="page-navigation__list">
+			<li class="page-navigation__item"><a href="./index.html">Главная</a></li>
+			<li class="page-navigation__item"><a href="./page-course-profession.html">Курс Профессии</a></li>
+			<li class="page-navigation__item"><a href="./page-course-recruiting.html">Курс Рекрутинг</a></li>
+			<li class="page-navigation__item"><a href="./page-recruitment-personnel.html">Поиск персонала</a></li>
+			<li class="page-navigation__item"><a href="./page-test-course-profession.html">Тест-драйв Курса Профессии </a></li>
+		</ul>
+	</div>
+</section>
+
+<style>
+	.page-navigation {
+		padding: 100px 0;
+	}
+
+	.page-navigation__item {
+		margin-bottom: 20px;
+	}
+
+	.page-navigation__item a {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 150%;
+		color: #5b9fd1;
+	}
+</style>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrap">
+      <div class="footer__row">
+        <div class="footer__column">
+          <div class="footer__logo logo"><a href="#"><img src="./img/logo-white.svg" alt=""></a></div>
+
+          <div class="footer__social">
+            <a href="#" class="footer__social-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
+                <path d="M15 7.96A7.041 7.041 0 1022.04 15 7.05 7.05 0 0015 7.96zm0 12.244a5.203 5.203 0 110-10.407 5.203 5.203 0 010 10.407zM21.735 0H8.265A8.275 8.275 0 000 8.265v13.47A8.275 8.275 0 008.265 30h13.47A8.275 8.275 0 0030 21.735V8.265A8.275 8.275 0 0021.735 0zm6.428 21.735a6.436 6.436 0 01-6.428 6.428H8.265a6.436 6.436 0 01-6.428-6.428V8.265a6.436 6.436 0 016.428-6.428h13.47a6.436 6.436 0 016.428 6.428v13.47zM24.49 7.04a1.53 1.53 0 11-3.061 0 1.53 1.53 0 013.06 0z" fill="#fff"/>
+              </svg>
+            </a>
+
+            <a href="#" class="footer__social-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="21" fill="none">
+                <path d="M1.718 9.042C8.428 6.08 12.907 4.125 15.146 3.18 21.535.484 22.869.015 23.733 0a1.5 1.5 0 01.892.271.987.987 0 01.328.633c.046.304.058.613.037.92-.345 3.69-1.845 12.64-2.607 16.774-.322 1.75-.958 2.333-1.574 2.392-1.056.099-1.917-.52-2.87-1.208l-.073-.053a16.833 16.833 0 00-.703-.492 172.467 172.467 0 01-2.694-1.835c-.75-.52-1.505-1.036-2.446-1.666-1.954-1.306-1.136-2.106-.043-3.173.183-.178.364-.359.541-.543.066-.069.342-.33.745-.71l.383-.361c1.806-1.704 5.13-4.839 5.214-5.209.015-.06.03-.291-.106-.41-.132-.123-.334-.082-.478-.047-.201.046-3.439 2.213-9.71 6.504-.917.642-1.749.95-2.497.933-.82-.017-2.403-.47-3.577-.857l-.504-.16-.003-.001C.795 11.32-.08 11.04.006 10.332c.052-.42.624-.852 1.712-1.29z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__email"><a href="#" class="animate-link --white">itrecruter@mail.ru</a></div>
+
+          <div class="footer__info">
+            ИП Черногорцева Ирина Сергеевна <br>
+            ИНН 290409046293 / ОГРНИП <br>
+            319505000035910
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="footer__menu menu-footer">
+
+            <div class="menu-footer__group">
+              <a href="#" class="menu-footer__name animate-link --white">Направления</a>
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Бесплатный урок «Кто такой рекрутер?»</a></li>
+
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Первый модуль «Системный рекрутинг»</a></li>
+
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Подбор персонала</a></li>
+
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Бесплатный тест «Разбираетесь ли в IT-профессиях?»</a></li>
+
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Курс «Основные профессии»</a></li>
+
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Тест-драйв «Основные профессии»</a></li>
+
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Курс «Системный рекрутинг»</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__row">
+        <div class="footer__column">
+          <div class="footer__group">
+            <a href="#" class="footer__link-info">Публичная оферта</a>
+            <a href="#" class="footer__link-info">Политика обработки персональных данных</a>
+          </div>
+
+          <div class="footer__group">
+            <a href="#" class="footer__link-info">Согласие на обработку персональных данных</a>
+            <a href="#" class="footer__link-info">Согласие на получение рассылки и рекламных материалов</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="footer__reserved">© АйтиРекрут. Все права защищены. © 2019 - 2021</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- // FOOTER -->
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/jquery.mCustomScrollbar.js"></script>
+<script src="./js/lightgallery-all.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+
+</html>
