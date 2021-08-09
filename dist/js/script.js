@@ -38,15 +38,21 @@ document.addEventListener(
 			},
 		});
 
-		let sldierReviews = new Swiper(".reviews__sldier", {
-			slidesPerView: "auto",
-			spaceBetween: 30,
+		let revSliders = document.querySelectorAll(".reviews__sldier");
 
-			navigation: {
-				nextEl: ".reviews__next",
-				prevEl: ".reviews__prev",
-			},
-		});
+		if (revSliders != null) {
+			revSliders.forEach((element) => {
+				let sldierReviews = new Swiper(element, {
+					slidesPerView: "auto",
+					spaceBetween: 30,
+
+					navigation: {
+						nextEl: element.closest(".reviews").querySelector(".reviews__next"),
+						prevEl: element.closest(".reviews").querySelector(".reviews__prev"),
+					},
+				});
+			});
+		}
 
 		let slidersCard = document.querySelectorAll(".slider-card__container");
 
@@ -102,6 +108,16 @@ document.addEventListener(
 				});
 			});
 		}
+
+		let sldierBuyCourse = new Swiper(".buy-course__slider", {
+			slidesPerView: 2,
+			spaceBetween: 30,
+
+			navigation: {
+				nextEl: ".buy-course__next",
+				prevEl: ".buy-course__prev",
+			},
+		});
 	},
 	false
 );

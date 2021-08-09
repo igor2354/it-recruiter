@@ -78,25 +78,31 @@
 	<section class="main-course">
 		<div class="container">
 			<div class="main-course__wrap">
-				<div class="main-course__text">Ближайший поток:</div>
+				<div class="main-course__row">
+					<div class="main-course__column">
+						<div class="main-course__date course-date">
+							<div class="course-date__sign">Ближайший поток:</div>
+							<div class="course-date__text">8 сентября – 6 октября</div>
+						</div>
 
-				<div class="main-course__date">8 сентября – 6 октября</div>
+						<div class="main-course__title title-h1">
+							Курс для рекрутеров<br />
+							«АйтиРекрут» <br />
+							(Основные профессии)
+						</div>
 
-				<div class="main-course__title title-h1">
-					Курс для рекрутеров<br />
-					«АйтиРекрут» (Профессии)
+						<div class="main-course__subtitle subtext">
+							Курс на понимание IT-сферы, охватывает<br />
+							самые востребованные профессии в IT
+						</div>
+
+						<a href="#buy-course" class="main-course__button main-btn --blue js-anchor"><span>Записаться на курс</span></a>
+					</div>
+
+					<div class="main-course__column">
+						<div class="main-course__image"><img src="./img/image-card-process-3.svg" alt="" /></div>
+					</div>
 				</div>
-
-				<div class="main-course__subtitle subtext">
-					Курс на понимание IT-сферы, охватывает<br />
-					самые востребованные профессии в IT
-				</div>
-
-				<a href="#buy-course" class="main-course__button main-btn --blue js-anchor"><span>Записаться на курс</span></a>
-
-				<div class="main-course__icon"><img src="./img/image-card-process-3.svg" alt="" /></div>
-
-				<div class="main-course__image"><img src="./img/image-main-screen.png" alt="" /></div>
 			</div>
 		</div>
 	</section>
@@ -272,8 +278,10 @@
 
 			<div class="test-drive__row">
 				<div class="test-drive__column">
-					<div class="test-drive__sign">Расписание:</div>
-					<div class="test-drive__date">5 августа – 11 августа</div>
+					<div class="test-drive__date course-date">
+						<div class="course-date__sign">Расписание:</div>
+						<div class="course-date__text">5 августа – 11 августа</div>
+					</div>
 
 					<ul class="test-drive__list blue-dots">
 						<li>Короткий видеоурок с концентратом полезной информации</li>
@@ -291,7 +299,7 @@
 						<div class="card-course__text">
 							<p>Эта стоимость вычитается при дальнейшей покупке курса «АйтиРекрут (профессии)».</p>
 
-							<p>Для получения ссылки на оплату курса за вычетом данной суммы нужно написать на itrecruter@mail.ru</p>
+							<p>Для получения ссылки на оплату курса за вычетом данной суммы нужно написать на <a href="mailto:itrecruter@mail.ru">itrecruter@mail.ru</a></p>
 						</div>
 					</div>
 				</div>
@@ -502,47 +510,188 @@
 				любой закрытой IT-вакансии
 			</div>
 
-			<div class="buy-course__sign">Поток:</div>
-			<div class="buy-course__date">8 сентября – 6 октября</div>
-
-			<div class="buy-course__row">
-				<div class="buy-course__column">
-					<div class="buy-course__text">
-						<ul>
-							<li>Доступ к материалам курса 2 недели + 2 недели бонусом. Даже если вы пройдете курс за 2 недели, доступ к нему 4 недели.</li>
-							<li>
-								Видеоуроки и 90% практики с моей проверкой и обратной<br />
-								связью.
-							</li>
-							<li>Индивидуальное обучение, ваши вопросы и ответы не видят другие участники.</li>
-							<li>Неограниченное количество индивидуальных письменных консультаций по темам курса. Стоимость консультации после курса 10 000 руб. в час.</li>
-							<li>Продление доступа к курсу на неделю 15 000 руб. Сообщать о продлении не позднее чем за 2е суток до окончания курса. При сообщении позже я вправе отказать</li>
-						</ul>
-
-						<p>Есть возможность рассрочки. При оплате 50% за вами фиксируется место и цена. Остальную часть необходимо внести не позднее, чем за сутки до даты начала курса.</p>
-						<p>Беспроцентная рассрочка от Тинькофф на 4, 6, 12 месяцев. Проценты банку плачу я.</p>
-						<p>Юр.лицам и ИП для выставления счёта обращаться <a href="mailto:itrecruter@mail.ru">itrecruter@mail.ru</a>. Если счёт не оплачен в течении 3х рабочих дней я в праве отдать место другому участнику.</p>
-						<p>Количество мест на курс ограничено. Как только занимаются места попасть на курс больше нельзя. Место бронируется за участником только когда произведена оплата полностью или частично.</p>
-					</div>
+			<div class="buy-course__group">
+				<div class="buy-course__date course-date">
+					<div class="course-date__sign">Поток:</div>
+					<div class="course-date__text">8 сентября – 6 октября</div>
 				</div>
 
-				<div class="buy-course__column">
-					<div class="buy-course__card card-buy-course">
-						<div class="card-buy-course__price-name">Стоимость</div>
-						<div class="card-buy-course__price"><span>40 000</span> руб.</div>
-						<div class="card-buy-course__text">
-							<p>С 13 августа стоимость</p>
-							<p class="card-buy-course__new-price">50 000 <span>руб.</span></p>
+				<div class="buy-course__arrows">
+					<div class="buy-course__prev swiper-button-prev slider-arrow-prev"></div>
+					<div class="buy-course__next swiper-button-next slider-arrow-next"></div>
+				</div>
+			</div>
+
+			<div class="buy-course__slider swiper-container">
+				<div class="buy-course__slides-wrap swiper-wrapper">
+					<div class="buy-course__slide swiper-slide">
+						<div class="buy-course__card card-buy-course --white">
+							<div class="card-buy-course__group-text">
+								<div class="card-buy-course__title">Тариф  Базовый</div>
+
+								<div class="card-buy-course__text">
+									<ul class="check-mark">
+										<li>Доступ к материалам курса 2 недели + 2 недели бонусом. Даже если вы пройдете курс за 2 недели, доступ к нему 4 недели.</li>
+										<li>
+											Видеоуроки и 90% практики с моей проверкой и обратной<br />
+											связью.
+										</li>
+										<li>Индивидуальное обучение, ваши вопросы и ответы не видят другие участники.</li>
+										<li>Неограниченное количество индивидуальных письменных консультаций по темам курса. Стоимость консультации после курса 10 000 руб. в час.</li>
+										<li>Продление доступа к курсу на неделю 15 000 руб. Сообщать о продлении не позднее чем за 2е суток до окончания курса. При сообщении позже я вправе отказать</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="card-buy-course__group-result">
+								<div class="card-buy-course__group-price">
+									<div class="card-buy-course__price-name">Стоимость</div>
+									<div class="card-buy-course__price"><span>30 000</span> руб.</div>
+									<div class="card-buy-course__text">
+										<p>С 13 августа стоимость</p>
+										<p class="card-buy-course__new-price">40 000 <span>руб.</span></p>
+									</div>
+								</div>
+
+								<div class="card-buy-course__group-button">
+									<a href="#" class="card-buy-course__button main-btn --blue"><span>Оплатить полностью</span></a>
+
+									<a href="#" class="card-buy-course__button var-btn-2 --blue">Оплатить частями</a>
+
+									<a href="#" class="card-buy-course__button var-btn-3"><img src="./img/icon-tin.svg" alt="" /> <span>Рассрочка от Тинькофф</span></a>
+								</div>
+							</div>
 						</div>
+					</div>
 
-						<a href="#" class="card-buy-course__button main-btn"><span>Оплатить полностью</span></a>
+					<div class="buy-course__slide swiper-slide">
+						<div class="buy-course__card card-buy-course">
+							<div class="card-buy-course__group-text">
+								<div class="card-buy-course__title">Тариф Продвинутый</div>
 
-						<a href="#" class="card-buy-course__button var-btn-2">Оплатить частями</a>
+								<div class="card-buy-course__text">
+									<ul class="check-mark">
+										<li>Доступ к материалам курса 2 недели + 2 недели бонусом. Даже если вы пройдете курс за 2 недели, доступ к нему 4 недели.</li>
+										<li>
+											Видеоуроки и 90% практики с моей проверкой и обратной<br />
+											связью.
+										</li>
+										<li>Индивидуальное обучение, ваши вопросы и ответы не видят другие участники.</li>
+										<li>Неограниченное количество индивидуальных письменных консультаций по темам курса. Стоимость консультации после курса 10 000 руб. в час.</li>
+										<li>Продление доступа к курсу на неделю 15 000 руб. Сообщать о продлении не позднее чем за 2е суток до окончания курса. При сообщении позже я вправе отказать</li>
+									</ul>
+								</div>
+							</div>
 
-						<a href="#" class="card-buy-course__button var-btn-3"><img src="./img/icon-tin.svg" alt="" /> <span>Рассрочка от Тинькофф</span></a>
+							<div class="card-buy-course__group-result">
+								<div class="card-buy-course__group-price">
+									<div class="card-buy-course__price-name">Стоимость</div>
+									<div class="card-buy-course__price"><span>40 000</span> руб.</div>
+									<div class="card-buy-course__text">
+										<p>С 13 августа стоимость</p>
+										<p class="card-buy-course__new-price">50 000 <span>руб.</span></p>
+									</div>
+								</div>
+
+								<div class="card-buy-course__group-button">
+									<a href="#" class="card-buy-course__button main-btn"><span>Оплатить полностью</span></a>
+
+									<a href="#" class="card-buy-course__button var-btn-2">Оплатить частями</a>
+
+									<a href="#" class="card-buy-course__button var-btn-3"><img src="./img/icon-tin.svg" alt="" /> <span>Рассрочка от Тинькофф</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="buy-course__slide swiper-slide">
+						<div class="buy-course__card card-buy-course --white">
+							<div class="card-buy-course__group-text">
+								<div class="card-buy-course__title">Тариф  Базовый</div>
+
+								<div class="card-buy-course__text">
+									<ul class="check-mark">
+										<li>Доступ к материалам курса 2 недели + 2 недели бонусом. Даже если вы пройдете курс за 2 недели, доступ к нему 4 недели.</li>
+										<li>
+											Видеоуроки и 90% практики с моей проверкой и обратной<br />
+											связью.
+										</li>
+										<li>Индивидуальное обучение, ваши вопросы и ответы не видят другие участники.</li>
+										<li>Неограниченное количество индивидуальных письменных консультаций по темам курса. Стоимость консультации после курса 10 000 руб. в час.</li>
+										<li>Продление доступа к курсу на неделю 15 000 руб. Сообщать о продлении не позднее чем за 2е суток до окончания курса. При сообщении позже я вправе отказать</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="card-buy-course__group-result">
+								<div class="card-buy-course__group-price">
+									<div class="card-buy-course__price-name">Стоимость</div>
+									<div class="card-buy-course__price"><span>30 000</span> руб.</div>
+									<div class="card-buy-course__text">
+										<p>С 13 августа стоимость</p>
+										<p class="card-buy-course__new-price">40 000 <span>руб.</span></p>
+									</div>
+								</div>
+
+								<div class="card-buy-course__group-button">
+									<a href="#" class="card-buy-course__button main-btn --blue"><span>Оплатить полностью</span></a>
+
+									<a href="#" class="card-buy-course__button var-btn-2 --blue">Оплатить частями</a>
+
+									<a href="#" class="card-buy-course__button var-btn-3"><img src="./img/icon-tin.svg" alt="" /> <span>Рассрочка от Тинькофф</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="buy-course__slide swiper-slide">
+						<div class="buy-course__card card-buy-course">
+							<div class="card-buy-course__group-text">
+								<div class="card-buy-course__title">Тариф Продвинутый</div>
+
+								<div class="card-buy-course__text">
+									<ul class="check-mark">
+										<li>Доступ к материалам курса 2 недели + 2 недели бонусом. Даже если вы пройдете курс за 2 недели, доступ к нему 4 недели.</li>
+										<li>
+											Видеоуроки и 90% практики с моей проверкой и обратной<br />
+											связью.
+										</li>
+										<li>Индивидуальное обучение, ваши вопросы и ответы не видят другие участники.</li>
+										<li>Неограниченное количество индивидуальных письменных консультаций по темам курса. Стоимость консультации после курса 10 000 руб. в час.</li>
+										<li>Продление доступа к курсу на неделю 15 000 руб. Сообщать о продлении не позднее чем за 2е суток до окончания курса. При сообщении позже я вправе отказать</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="card-buy-course__group-result">
+								<div class="card-buy-course__group-price">
+									<div class="card-buy-course__price-name">Стоимость</div>
+									<div class="card-buy-course__price"><span>40 000</span> руб.</div>
+									<div class="card-buy-course__text">
+										<p>С 13 августа стоимость</p>
+										<p class="card-buy-course__new-price">50 000 <span>руб.</span></p>
+									</div>
+								</div>
+
+								<div class="card-buy-course__group-button">
+									<a href="#" class="card-buy-course__button main-btn"><span>Оплатить полностью</span></a>
+
+									<a href="#" class="card-buy-course__button var-btn-2">Оплатить частями</a>
+
+									<a href="#" class="card-buy-course__button var-btn-3"><img src="./img/icon-tin.svg" alt="" /> <span>Рассрочка от Тинькофф</span></a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+
+			<ul class="buy-course__list blue-dots">
+				<li>Есть возможность рассрочки. При оплате 50% за вами фиксируется место и цена. Остальную часть необходимо внести не позднее, чем за сутки до даты начала курса</li>
+				<li>Беспроцентная рассрочка от Тинькофф на 4, 6, 12 месяцев. Проценты банку плачу я</li>
+				<li>Юр.лицам и ИП для выставления счёта обращаться <a href="mailto:itrecruter@mail.ru">itrecruter@mail.ru.</a> Если счёт не оплачен в течении 3х рабочих дней я в праве отдать место другому участнику</li>
+				<li>Количество мест на курс ограничено. Как только занимаются места попасть на курс больше нельзя. Место бронируется за участником только когда произведена оплата полностью или частично</li>
+			</ul>
 		</div>
 	</div>
 </section>
