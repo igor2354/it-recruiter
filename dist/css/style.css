@@ -1727,13 +1727,10 @@ ul.check-mark li {
       .card-module-course__subtext p.p-small {
         font-size: 18px; }
   .card-module-course__text {
-    margin-right: -80px; }
-    .card-module-course__text ul {
-      -webkit-columns: 2;
-         -moz-columns: 2;
-              columns: 2; }
-      .card-module-course__text ul li {
-        margin-right: 80px; }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 20px; }
 
 .footer {
   background: url("../img/footer-gradient.svg") no-repeat 120% 100%/50%, url("../img/footer-gradient.svg") no-repeat -20% 70%/50%, #284d73; }
