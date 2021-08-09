@@ -213,4 +213,8 @@ $(document).ready(function () {
 		);
 		return false;
 	});
+
+	$(".lightgallery").lightGallery({
+		selector: 'a'
+	  });
 });
