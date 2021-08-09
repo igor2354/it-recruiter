@@ -1096,6 +1096,9 @@ ul.blue-dots li {
 .directions__wrap {
   padding: 90px 0; }
 
+.directions__group {
+  margin-bottom: 110px; }
+
 .directions__title {
   margin-bottom: 60px;
   text-align: center; }
@@ -1124,12 +1127,10 @@ ul.blue-dots li {
   color: #0d1215; }
 
 .directions__sign {
-  margin: 0 auto 45px auto;
+  margin: 0 auto 0 auto;
   text-align: center; }
   .directions__sign p {
     margin-bottom: 45px; }
-    .directions__sign p:last-child {
-      margin-bottom: 0; }
     .directions__sign p.sidn-blue {
       margin-top: 90px;
       font-weight: 600;
@@ -1137,18 +1138,18 @@ ul.blue-dots li {
       line-height: 150%;
       color: #284d73; }
 
-.block-info {
-  padding: 75px 0 0 0; }
-  .block-info__row {
-    display: grid;
-    grid-template-columns: 0.73fr 0.73fr 1fr;
-    gap: 140px; }
-  .block-info__column:last-child {
-    grid-column: span 2; }
-  .block-info__text ul {
-    display: grid;
-    grid-template-columns: 0.73fr 1fr;
-    grid-column-gap: 140px; }
+.block-info__row {
+  display: grid;
+  grid-template-columns: 0.73fr 0.73fr 1fr;
+  gap: 140px; }
+
+.block-info__column:last-child {
+  grid-column: span 2; }
+
+.block-info__text ul {
+  display: grid;
+  grid-template-columns: 0.73fr 1fr;
+  grid-column-gap: 140px; }
 
 .program {
   background: #f3f7ff; }
@@ -1163,9 +1164,8 @@ ul.blue-dots li {
     display: grid;
     grid-template-columns: 0.73fr 0.73fr 1fr;
     grid-column-gap: 140px;
-    grid-row-gap: 45px; }
-  .program__course {
-    margin-top: 45px; }
+    grid-row-gap: 45px;
+    margin-bottom: 110px; }
 
 .crad-program__title {
   margin-bottom: 15px;
@@ -1696,6 +1696,43 @@ ul.check-mark li {
     border-radius: 50%;
     background: url("../img/icon-arrow-buy-course.svg") no-repeat center; }
 
+.schedule__wrap {
+  padding-top: 90px; }
+
+.schedule__row {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  grid-gap: 110px; }
+
+.schedule__title {
+  margin-bottom: 50px; }
+
+.schedule__date {
+  margin-bottom: 20px; }
+
+.schedule__text {
+  margin-top: 30px; }
+  .schedule__text p {
+    margin-bottom: 60px; }
+    .schedule__text p:last-child {
+      margin-bottom: 0; }
+  .schedule__text .p-blue {
+    font-weight: 600;
+    font-size: 24px;
+    color: #5b9fd1; }
+
+.schedule__card .check-mark li {
+  font-size: 18px; }
+  .schedule__card .check-mark li::before {
+    -webkit-filter: brightness(100);
+            filter: brightness(100); }
+
+.schedule__card .card-course__text {
+  margin-bottom: 45px; }
+
+.schedule__card .card-course__button {
+  margin-bottom: 0; }
+
 .module-course__wrap {
   padding: 90px 0 0 0; }
 
@@ -1825,27 +1862,28 @@ ul.check-mark li {
     line-height: 150%;
     color: #ffffff; }
 
-.menu-footer {
+.menu-footer__name {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #ffffff; }
+
+.menu-footer__list {
   display: grid;
-  grid-template-columns: 1fr 0.8fr 0.8fr;
-  grid-gap: 50px; }
-  .menu-footer__name {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 30px;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 150%;
-    color: #ffffff; }
-  .menu-footer__item {
-    margin-bottom: 20px; }
-    .menu-footer__item:last-child {
-      margin-bottom: 0; }
-  .menu-footer__link {
-    position: relative;
-    font-size: 14px;
-    line-height: 130%;
-    color: #ffffff; }
+  grid-template-columns: repeat(3, 190px);
+  grid-gap: 30px; }
+
+.menu-footer__item:nth-child(3) {
+  grid-row: span 2; }
+
+.menu-footer__link {
+  position: relative;
+  font-size: 14px;
+  line-height: 130%;
+  color: #ffffff; }
 
 .animate-link::after {
   text-decoration: none;
