@@ -215,6 +215,30 @@ $(document).ready(function () {
 	});
 
 	$(".lightgallery").lightGallery({
-		selector: 'a'
-	  });
+		selector: "a",
+	});
+
+	$(".test-radio").on("click", function (e) {
+		$(this).parents(".card-test").find(".card-test__button").removeClass("disabled");
+
+		$(this).parents(".card-test").find(".test-radio").removeClass("--green");
+		$(this).parents(".card-test").find(".test-radio").removeClass("--red");
+
+		if ($(this).attr("data-true") == "true") {
+			$(this).addClass("--green");
+		} else {
+			$(this).addClass("--red");
+		}
+	});
+
+	$(".card-test__button").on("click", function (e) {
+		e.preventDefault();
+
+		let currentQuestion = $(this).parents(".card-test");
+
+		if (!$(this).hasClass("disabled") && currentQuestion.index() != $(".card-test").length - 1) {
+			currentQuestion.removeClass("active");
+			currentQuestion.next().addClass("active");
+		}
+	});
 });
