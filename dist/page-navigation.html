@@ -23,6 +23,7 @@
 			<nav class="header__nav">
 				<ul class="main-nav">
 					<li class="main-nav__item --drop nav-item">
+						<div class="main-nav__icon"></div>
 						<a href="#" class="main-nav__link animate-link">Направления</a>
 						<ul class="main-nav__submenu nav-submenu">
 							<li class="main-nav__subitem nav-item">
@@ -66,10 +67,87 @@
 					<a href="#"><img src="./img/icon-insta.svg" alt="" /></a>
 				</div>
 			</div>
+
+			<div class="header__burder">
+				<span class="header__burger-line --left"></span>
+				<span class="header__burger-line --right"></span>
+				<span class="header__burger-text">Меню</span>
+			</div>
 		</div>
 	</div>
 </header>
 
+<div class="mobile-menu">
+	<div class="mobile-menu__top">
+		<div class="mobile-menu__logo logo">
+			<a href="#"><img src="./img/logo-white.svg" alt="" /></a>
+		</div>
+
+		<div class="mobile-menu__close"></div>
+	</div>
+
+	<div class="mobile-menu__nav">
+		<ul class="main-nav">
+			<li class="main-nav__item --drop nav-item">
+				<div class="main-nav__icon"></div>
+				<a href="#" class="main-nav__link animate-link">Направления</a>
+				<ul class="main-nav__submenu nav-submenu">
+					<li class="main-nav__subitem nav-item">
+						<a href="#" class="main-nav__sublink">Знакомство с профессией</a>
+					</li>
+
+					<li class="main-nav__subitem nav-item">
+						<a href="#" class="main-nav__sublink">«АйтиРекрут» (Профессии)</a>
+					</li>
+
+					<li class="main-nav__subitem nav-item">
+						<a href="#" class="main-nav__sublink">Тест на знание IT-профессий</a>
+					</li>
+
+					<li class="main-nav__subitem nav-item">
+						<a href="#" class="main-nav__sublink">Первый модуль «АйтиРекрут» (Рекрутинг)</a>
+					</li>
+
+					<li class="main-nav__subitem nav-item">
+						<a href="#" class="main-nav__sublink">«АйтиРекрут» (Рекрутинг)</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="main-nav__item nav-item">
+				<a href="#" class="main-nav__link animate-link">Обо мне</a>
+			</li>
+
+			<li class="main-nav__item nav-item">
+				<a href="#" class="main-nav__link animate-link">Вопрос-ответ</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="mobile-menu__phone">
+		<a href="tel:+74999907235">+7 (499) 990-72-35</a>
+	</div>
+
+	<div class="mobile-menu__email">
+		<a href="mailto:itrecruter@mail.ru">itrecruter@mail.ru</a>
+	</div>
+
+	<div class="mobile-menu__social">
+		<a href="#">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
+				<path d="M15 7.96A7.041 7.041 0 1022.04 15 7.05 7.05 0 0015 7.96zm0 12.244a5.203 5.203 0 110-10.407 5.203 5.203 0 010 10.407zM21.735 0H8.265A8.275 8.275 0 000 8.265v13.47A8.275 8.275 0 008.265 30h13.47A8.275 8.275 0 0030 21.735V8.265A8.275 8.275 0 0021.735 0zm6.428 21.735a6.436 6.436 0 01-6.428 6.428H8.265a6.436 6.436 0 01-6.428-6.428V8.265a6.436 6.436 0 016.428-6.428h13.47a6.436 6.436 0 016.428 6.428v13.47zM24.49 7.04a1.53 1.53 0 11-3.061 0 1.53 1.53 0 013.06 0z" fill="#fff" />
+			</svg>
+		</a>
+
+		<a href="#">
+			<svg xmlns="http://www.w3.org/2000/svg" width="25" height="21" fill="none">
+				<path d="M1.718 9.042C8.428 6.08 12.907 4.125 15.146 3.18 21.535.484 22.869.015 23.733 0a1.5 1.5 0 01.892.271.987.987 0 01.328.633c.046.304.058.613.037.92-.345 3.69-1.845 12.64-2.607 16.774-.322 1.75-.958 2.333-1.574 2.392-1.056.099-1.917-.52-2.87-1.208l-.073-.053a16.833 16.833 0 00-.703-.492 172.467 172.467 0 01-2.694-1.835c-.75-.52-1.505-1.036-2.446-1.666-1.954-1.306-1.136-2.106-.043-3.173.183-.178.364-.359.541-.543.066-.069.342-.33.745-.71l.383-.361c1.806-1.704 5.13-4.839 5.214-5.209.015-.06.03-.291-.106-.41-.132-.123-.334-.082-.478-.047-.201.046-3.439 2.213-9.71 6.504-.917.642-1.749.95-2.497.933-.82-.017-2.403-.47-3.577-.857l-.504-.16-.003-.001C.795 11.32-.08 11.04.006 10.332c.052-.42.624-.852 1.712-1.29z" fill="#fff" />
+			</svg>
+		</a>
+	</div>
+</div>
+
+<div class="bg-overlay"></div>
 <!-- // HEADER -->
 
 
@@ -125,7 +203,9 @@
             </a>
           </div>
 
-          <div class="footer__email"><a href="#" class="animate-link --white">itrecruter@mail.ru</a></div>
+          <div class="footer__email"><a href="mailto:itrecruter@mail.ru" class="animate-link --white">itrecruter@mail.ru</a></div>
+
+          <div class="footer__phone"><a href="tel:+79295397012" class="animate-link --white">+7 (929) 539 70 12</a></div>
 
           <div class="footer__info">
             ИП Черногорцева Ирина Сергеевна <br>

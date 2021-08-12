@@ -110,7 +110,7 @@ document.addEventListener(
 		}
 
 		let sldierBuyCourse = new Swiper(".buy-course__slider", {
-			slidesPerView: 2,
+			slidesPerView: 1,
 			spaceBetween: 30,
 
 			navigation: {
@@ -240,5 +240,16 @@ $(document).ready(function () {
 			currentQuestion.removeClass("active");
 			currentQuestion.next().addClass("active");
 		}
+	});
+
+	$(".header__burder, .mobile-menu__close, .bg-overlay").on("click", function (e) {
+		$(".header__burder").toggleClass("active");
+		$(".mobile-menu").toggleClass("active");
+		$(".bg-overlay").fadeToggle();
+	});
+
+	$(".mobile-menu__nav .main-nav__icon").on("click", function (e) {
+		$(this).toggleClass("active");
+		$(this).parent().find("> .main-nav__submenu").slideToggle();
 	});
 });
