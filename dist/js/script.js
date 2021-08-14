@@ -13,19 +13,6 @@ document.addEventListener(
 			pagination: {
 				el: ".main-screen__pagination",
 			},
-			// breakpoints: {
-			//     500: {
-			//         slidesPerView: 2,
-			//         spaceBetween: 20,
-			//         freeMode: false,
-			//     },
-
-			//     768: {
-			//         slidesPerView: "auto",
-			//         spaceBetween: 30,
-			//         freeMode: true,
-			//     },
-			// },
 		});
 
 		let sldierMassMedia = new Swiper(".mass-media__slider", {
@@ -44,11 +31,17 @@ document.addEventListener(
 			revSliders.forEach((element) => {
 				let sldierReviews = new Swiper(element, {
 					slidesPerView: "auto",
-					spaceBetween: 30,
+					spaceBetween: 15,
 
 					navigation: {
 						nextEl: element.closest(".reviews").querySelector(".reviews__next"),
 						prevEl: element.closest(".reviews").querySelector(".reviews__prev"),
+					},
+
+					breakpoints: {
+						768: {
+							spaceBetween: 30,
+						},
 					},
 				});
 			});
@@ -74,35 +67,20 @@ document.addEventListener(
 					slidesPerView: "auto",
 					loop: caseLoop,
 					watchOverflow: true,
-					spaceBetween: 30,
+					spaceBetween: 15,
 					navigation: {
 						nextEl: "." + element.closest(".--slider-card").classList[0] + " .slider-card__next",
 						prevEl: "." + element.closest(".--slider-card").classList[0] + " .slider-card__prev",
 					},
 
-					on: {
-						init: function () {
-							let slider = element;
-							if (slider !== null) {
-								let sliderCurrent = slider.closest(".--slider-card").querySelectorAll(".slider-card__pagination-current");
-								sliderCurrent.forEach((el) => {
-									el.textContent = this.realIndex + 1;
-								});
-								let sliderAll = slider.closest(".--slider-card").querySelectorAll(".slider-card__pagination-all");
-								sliderAll.forEach((el) => {
-									el.textContent = this.snapIndex;
-								});
-							}
-						},
+					pagination: {
+						el: "." + element.closest(".--slider-card").classList[0] + " .slider-card__pagination",
+						type: "fraction",
+					},
 
-						slideChange: function () {
-							let slider = element;
-							if (slider !== null) {
-								let sliderCurrent = slider.closest(".--slider-card").querySelectorAll(".slider-card__pagination-current");
-								sliderCurrent.forEach((el) => {
-									el.textContent = this.realIndex + 1;
-								});
-							}
+					breakpoints: {
+						500: {
+							spaceBetween: 30,
 						},
 					},
 				});
@@ -248,8 +226,21 @@ $(document).ready(function () {
 		$(".bg-overlay").fadeToggle();
 	});
 
-	$(".mobile-menu__nav .main-nav__icon").on("click", function (e) {
+	$(".mobile-menu__nav .main-nav__item.--drop").on("click", function (e) {
 		$(this).toggleClass("active");
-		$(this).parent().find("> .main-nav__submenu").slideToggle();
+		$(this).find("> .main-nav__submenu").slideToggle();
 	});
+
+	let match = [window.matchMedia("(max-width: 900px)")];
+
+	function moveMobileMenu() {
+		if (match[0].matches) {
+			$(".footer__logo").after($(".footer__menu"));
+		} else {
+			$(".footer__column.js-menu").append($(".footer__menu"));
+		}
+	}
+
+	moveMobileMenu();
+	match[0].addListener(moveMobileMenu);
 });

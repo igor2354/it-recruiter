@@ -26,8 +26,7 @@
 			<nav class="header__nav">
 				<ul class="main-nav">
 					<li class="main-nav__item --drop nav-item">
-						<div class="main-nav__icon"></div>
-						<a href="#" class="main-nav__link animate-link">Направления</a>
+						<span class="main-nav__link animate-link">Направления</span>
 						<ul class="main-nav__submenu nav-submenu">
 							<li class="main-nav__subitem nav-item">
 								<a href="#" class="main-nav__sublink">Знакомство с профессией</a>
@@ -92,8 +91,7 @@
 	<div class="mobile-menu__nav">
 		<ul class="main-nav">
 			<li class="main-nav__item --drop nav-item">
-				<div class="main-nav__icon"></div>
-				<a href="#" class="main-nav__link animate-link">Направления</a>
+				<span class="main-nav__link animate-link">Направления</span>
 				<ul class="main-nav__submenu nav-submenu">
 					<li class="main-nav__subitem nav-item">
 						<a href="#" class="main-nav__sublink">Знакомство с профессией</a>
@@ -1043,17 +1041,17 @@
 <section class="participant --slider-card">
 	<div class="container">
 		<div class="participant__wrap">
-			<div class="participant__group-title">
-				<div class="participant__title title-h2">Участники курса</div>
-				<div class="participant__arrows slider-card__arrows">
-					<div class="slider-card__prev swiper-button-prev slider-arrow-prev"></div>
-					<div class="slider-card__pagination"><span class="slider-card__pagination-current"></span> / <span class="slider-card__pagination-all"></span></div>
-					<div class="slider-card__next swiper-button-next slider-arrow-next"></div>
-				</div>
-			</div>
-
 			<div class="slider-card">
 				<div class="slider-card__container swiper-container">
+					<div class="participant__group-title">
+						<div class="participant__title title-h2">Участники курса</div>
+						<div class="participant__arrows slider-card__arrows">
+							<div class="slider-card__prev swiper-button-prev slider-arrow-prev"></div>
+							<div class="slider-card__pagination"></div>
+							<div class="slider-card__next swiper-button-next slider-arrow-next"></div>
+						</div>
+					</div>
+
 					<div class="slider-card__wrap swiper-wrapper">
 						<div class="slider-card__slide swiper-slide">
 							<div class="participant__item card-participant">
@@ -1191,13 +1189,13 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
 
-			<div class="participant__arrows slider-card__arrows --bottom">
-				<div class="slider-card__prev swiper-button-prev slider-arrow-prev"></div>
-				<div class="slider-card__pagination"><span class="slider-card__pagination-current"></span> / <span class="slider-card__pagination-all"></span></div>
-				<div class="slider-card__next swiper-button-next slider-arrow-next"></div>
+					<div class="participant__arrows slider-card__arrows --bottom">
+						<div class="slider-card__prev swiper-button-prev slider-arrow-prev"></div>
+						<div class="slider-card__pagination"></div>
+						<div class="slider-card__next swiper-button-next slider-arrow-next"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1237,7 +1235,7 @@
           </div>
         </div>
 
-        <div class="footer__column">
+        <div class="footer__column js-menu">
           <div class="footer__menu menu-footer">
 
             <div class="menu-footer__group">
@@ -1247,8 +1245,6 @@
 
                 <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Первый модуль «Системный рекрутинг»</a></li>
 
-                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Подбор персонала</a></li>
-
                 <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Бесплатный тест «Разбираетесь ли в IT-профессиях?»</a></li>
 
                 <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Курс «Основные профессии»</a></li>
@@ -1256,6 +1252,8 @@
                 <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Тест-драйв «Основные профессии»</a></li>
 
                 <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Курс «Системный рекрутинг»</a></li>
+
+                <li class="menu-footer__item"><a href="#" class="menu-footer__link animate-link --white">Подбор персонала</a></li>
               </ul>
             </div>
 
@@ -1277,7 +1275,7 @@
         </div>
 
         <div class="footer__column">
-          <div class="footer__reserved">© АйтиРекрут. Все права защищены. © 2019 - 2021</div>
+          <div class="footer__reserved"><span>© АйтиРекрут. Все права защищены.</span> <span>© 2019 - 2021</span></div>
         </div>
       </div>
     </div>
