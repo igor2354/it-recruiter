@@ -1998,9 +1998,9 @@ ul.blue-dots li {
          object-position: top; }
 
 @media (max-width: 1400px) {
-  .slider-arrow-next {
+  .reviews .slider-arrow-next {
     right: 5px; }
-  .slider-arrow-prev {
+  .reviews .slider-arrow-prev {
     left: 5px; } }
 
 @media (max-width: 1170px) {
@@ -3771,7 +3771,9 @@ ul.check-mark li {
   .menu-footer__name {
     margin-bottom: 15px; }
   .menu-footer__list {
-    grid-row-gap: 15px; }
+    grid-row-gap: 10px; }
+  .menu-footer__item {
+    line-height: 100%; }
   .menu-footer__link {
     line-height: 100%; } }
 
