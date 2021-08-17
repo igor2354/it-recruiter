@@ -64,7 +64,7 @@ document.addEventListener(
 				}
 
 				let sldierCard = new Swiper(element, {
-					slidesPerView: "auto",
+					slidesPerView: 1,
 					loop: caseLoop,
 					watchOverflow: true,
 					spaceBetween: 15,
@@ -79,8 +79,13 @@ document.addEventListener(
 					},
 
 					breakpoints: {
-						500: {
-							spaceBetween: 30,
+						768: {
+							slidesPerView: "auto",
+						},
+
+						600: {
+							slidesPerView: 2,
+							spaceBetween: 20,
 						},
 					},
 				});
@@ -156,22 +161,6 @@ $(document).ready(function () {
 			$(".js-progress-button.process-timeline__next").addClass("--disabled");
 		} else {
 			$(".js-progress-button.process-timeline__next").removeClass("--disabled");
-		}
-	});
-
-	$(".question__name").on("click", function () {
-		if ($(this).parents(".question__item").hasClass("active")) {
-			$(".question__item").removeClass("active");
-
-			$(".question__text").slideUp();
-		} else {
-			$(".question__item").removeClass("active");
-
-			$(".question__text").slideUp();
-
-			$(this).parents(".question__item").addClass("active");
-
-			$(this).parents(".question__item").find(".question__text").slideDown();
 		}
 	});
 
