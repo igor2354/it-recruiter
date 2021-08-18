@@ -1069,6 +1069,7 @@ h1 {
       width: 11px;
       height: 11px;
       background: #284d73;
+      border-radius: 3px;
       -webkit-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
