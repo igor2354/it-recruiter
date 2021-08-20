@@ -1,20 +1,6 @@
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
-		let mainSlider = new Swiper(".main-screen__slider", {
-			slidesPerView: 1,
-			spaceBetween: 20,
-
-			navigation: {
-				nextEl: ".main-screen__next",
-				prevEl: ".main-screen__prev",
-			},
-
-			pagination: {
-				el: ".main-screen__pagination",
-			},
-		});
-
 		let sldierMassMedia = new Swiper(".mass-media__slider", {
 			slidesPerView: 1,
 			spaceBetween: 20,
@@ -25,13 +11,49 @@ document.addEventListener(
 			},
 		});
 
+		let sldierProcessTimeline = new Swiper(".process-timeline__slider", {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			autoHeight: true,
+
+			navigation: {
+				nextEl: ".process-timeline__next",
+				prevEl: ".process-timeline__prev",
+			},
+		});
+
+		let progresButton = document.querySelectorAll(".js-progress-item");
+
+		if (progresButton != null) {
+			progresButton.forEach((element, index, array) => {
+				element.addEventListener("click", function (e) {
+					if (!this.classList.contains("active")) {
+						array.forEach((el) => el.classList.remove("active"));
+						this.classList.add("active");
+
+						sldierProcessTimeline.slideTo(index);
+					}
+				});
+			});
+		}
+
+		sldierProcessTimeline.on("slideChange", function () {
+			if (progresButton != null) {
+				progresButton.forEach((element, index, array) => {
+					element.classList.remove("active");
+					array[sldierProcessTimeline.activeIndex].classList.add("active");
+				});
+			}
+		});
+
 		let revSliders = document.querySelectorAll(".reviews__sldier");
 
 		if (revSliders != null) {
 			revSliders.forEach((element) => {
 				let sldierReviews = new Swiper(element, {
-					slidesPerView: "auto",
+					slidesPerView: 1,
 					spaceBetween: 15,
+					watchOverflow: true,
 
 					navigation: {
 						nextEl: element.closest(".reviews").querySelector(".reviews__next"),
@@ -39,7 +61,13 @@ document.addEventListener(
 					},
 
 					breakpoints: {
-						768: {
+						500: {
+							slidesPerView: 2,
+							spaceBetween: 15,
+						},
+
+						900: {
+							slidesPerView: 3,
 							spaceBetween: 30,
 						},
 					},
@@ -80,11 +108,11 @@ document.addEventListener(
 
 					breakpoints: {
 						768: {
-							slidesPerView: "auto",
+							slidesPerView: 2,
 						},
 
-						600: {
-							slidesPerView: 2,
+						1170: {
+							slidesPerView: 3,
 							spaceBetween: 20,
 						},
 					},
@@ -106,64 +134,6 @@ document.addEventListener(
 );
 
 $(document).ready(function () {
-	$(".js-progress-item").on("click", function () {
-		if (!$(this).hasClass("active")) {
-			let currentStep = $(this).attr("data-step");
-
-			$(".js-progress-content").removeClass("active");
-			$(".js-progress-item").removeClass("active");
-
-			$(this).addClass("active");
-
-			$(`.js-progress-content[data-step="${currentStep}"]`).addClass("active");
-
-			if ($(".js-progress-item.active").index() == 0) {
-				$(".js-progress-button.process-timeline__prev").addClass("--disabled");
-			} else {
-				$(".js-progress-button.process-timeline__prev").removeClass("--disabled");
-			}
-
-			if ($(".js-progress-item.active").index() == $(".js-progress-item").length - 1) {
-				$(".js-progress-button.process-timeline__next").addClass("--disabled");
-			} else {
-				$(".js-progress-button.process-timeline__next").removeClass("--disabled");
-			}
-		}
-	});
-
-	$(".js-progress-button").on("click", function () {
-		if ($(".js-progress-item.active").index() >= 0 && $(".js-progress-item.active").index() <= $(".js-progress-item").length - 1) {
-			let currentStep = parseInt($(".js-progress-item.active").attr("data-step"));
-
-			$(".js-progress-content").removeClass("active");
-			$(".js-progress-item").removeClass("active");
-
-			if ($(this).hasClass("process-timeline__next")) {
-				$(`.js-progress-content[data-step="${currentStep + 1}"]`).addClass("active");
-
-				$(`.js-progress-item[data-step="${currentStep + 1}"]`).addClass("active");
-			}
-
-			if ($(this).hasClass("process-timeline__prev")) {
-				$(`.js-progress-content[data-step="${currentStep - 1}"]`).addClass("active");
-
-				$(`.js-progress-item[data-step="${currentStep - 1}"]`).addClass("active");
-			}
-		}
-
-		if ($(".js-progress-item.active").index() == 0) {
-			$(".js-progress-button.process-timeline__prev").addClass("--disabled");
-		} else {
-			$(".js-progress-button.process-timeline__prev").removeClass("--disabled");
-		}
-
-		if ($(".js-progress-item.active").index() == $(".js-progress-item").length - 1) {
-			$(".js-progress-button.process-timeline__next").addClass("--disabled");
-		} else {
-			$(".js-progress-button.process-timeline__next").removeClass("--disabled");
-		}
-	});
-
 	// Кастомный скроллбар
 	$(".js-text-hidden").mCustomScrollbar({
 		theme: "my-theme",
