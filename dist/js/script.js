@@ -15,6 +15,9 @@ document.addEventListener(
 			slidesPerView: 1,
 			spaceBetween: 20,
 			autoHeight: true,
+			touchMoveStopPropagation: true,
+			preventClicksPropagation: true,
+			resistanceRatio: 1,
 
 			navigation: {
 				nextEl: ".process-timeline__next",
