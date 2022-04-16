@@ -212,7 +212,14 @@ body.lock {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .container {
   max-width: 1320px;
@@ -786,6 +793,9 @@ h1 {
   z-index: 9; }
 
 .container-bg {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   background: url("../img/main-grad-3.svg") no-repeat 100% 40%, #f3f7ff; }
 
 .main-screen__wrap {
