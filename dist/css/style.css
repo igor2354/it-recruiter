@@ -561,13 +561,13 @@ h1 {
   color: #284d73; }
 
 .main-insta a {
-  display: block;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  display: block; }
   .main-insta a img {
-    vertical-align: middle; }
-  .main-insta a:hover {
+    vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .main-insta a:hover img {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2); }
